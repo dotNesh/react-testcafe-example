@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { notify } from 'react-notify-toast';
 import witch from './scary-ripped-witch-silhouette-by-vexels.png';
 import './Styles.scss';
 
@@ -50,7 +49,7 @@ class Signup extends React.Component {
             <div className="form-group">
               <button
                 type="submit"
-                className="signup-button"
+                className="signup-button disabled"
                 disabled
               >
               Get Started
@@ -72,25 +71,25 @@ class Signup extends React.Component {
           <div className="form-group">
             <label htmlFor="firstName">
                   First Name
-              <input type="text" placeholder="First Name" name="firstName" value={firstName} onChange={this.handleChange} />
+              <input type="text" placeholder="First Name" name="firstName" id="firstName" value={firstName} onChange={this.handleChange} />
             </label>
           </div>
           <div className="form-group">
             <label htmlFor="lastName">
                   Last Name
-              <input type="text" placeholder="Last Name" name="lastName" value={lastName} onChange={this.handleChange} />
+              <input type="text" placeholder="Last Name" name="lastName" id="lastName" value={lastName} onChange={this.handleChange} />
             </label>
           </div>
           <div className="form-group">
             <label htmlFor="Password">
                   Password
-              <input type="password" placeholder="Password" name="password" value={password} onChange={this.handleChange} />
+              <input type="password" placeholder="Password" name="password" id="password" value={password} onChange={this.handleChange} />
             </label>
           </div>
           <div className="form-group">
             <label htmlFor="confirm-password">
                   Confirm Password
-              <input type="password" placeholder="Confirm Password" name="confirmPassword" value={confirmPassword} onChange={this.handleChange} />
+              <input type="password" placeholder="Confirm Password" name="confirmPassword" id="confirmPassword" value={confirmPassword} onChange={this.handleChange} />
             </label>
           </div>
           {this.renderSubmitButton()}
@@ -110,7 +109,7 @@ class Signup extends React.Component {
             <p>
               To keep connected to us please login with your personal info.
             </p>
-            <Link to="/login" className="btn"> Login </Link>
+            <Link to="/login" className="login-btn"> Login </Link>
           </div>
         </div>
         <div className="signup-form">
